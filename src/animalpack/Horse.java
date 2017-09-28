@@ -16,6 +16,13 @@ public class Horse extends Animal implements Action{
 		System.out.println("A new Horse has been created.");
 	}//END OF CONSTRUCTOR 1
 	
+	public Horse(String name) {
+		super("Horse","Neigh","hands");
+		horseCount++; 
+		setName(name);  
+		System.out.println(name + " has been created.");
+	}//END OF CONSTUCTOR 2
+	
 	public Horse(boolean value) {
 		super("Horse","Neigh","hands");
 		horseCount++; 
@@ -24,7 +31,7 @@ public class Horse extends Animal implements Action{
 		if(this.value == true) {
 			System.out.println("A new Horse has been created.");
 		}
-	}//END OF CONSTRUCTOR 2
+	}//END OF CONSTRUCTOR 3
 	
 	public void setName(String name) {
 		super.setName(name); 

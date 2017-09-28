@@ -4,17 +4,14 @@ public class MainAnimal {
 
 	public static void main(String[] args) {
 
-		/*Horse dakota = new Horse(false); 
-		dakota.setName("Dakota");
+		Horse dakota = new Horse("Dakota"); 
 		ImagePrint.imagePrint(dakota);
 		
-		Horse eclipse = new Horse(false); 
-		eclipse.setName("Eclipse");
+		Horse eclipse = new Horse("Eclipse"); 
 		ImagePrint.imagePrint(eclipse);
 		
-		Horse thor = new Horse(false); 
-		thor.setName("Thor");
-		ImagePrint.imagePrint(thor);*/
+		Horse thor = new Horse("Thor"); 
+		ImagePrint.imagePrint(thor);
 		
 		Dog finn = new Dog("Finn");
 		ImagePrint.imagePrint(finn);

@@ -13,10 +13,13 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+
 public class LoadImageApp extends JPanel{
-    private static final long serialVersionUID = 1L;
+    //Default variable 
+	private static final long serialVersionUID = 1L;
     private BufferedImage image;
- 
+    
+//******************CONSTRUCTORS*************************************************************************** 
     public LoadImageApp() {
     		System.out.print( "===================\r"
     				+"ERROR:\n"
@@ -25,8 +28,15 @@ public class LoadImageApp extends JPanel{
     }
     
     public LoadImageApp(String name){
-        setMinimumSize(new Dimension(400,400));
+    	
+        //Sets a minimum size for each image
+    		setMinimumSize(new Dimension(400,400));
+        
+        //sets name to a capitolized letter to match the image name
+        //In the file 
         String name2 = name.toUpperCase(); 
+        
+        //If an exception occurs one of the variables will become false
         boolean try1 = true; 
         boolean try2 = true;
         boolean try3 = true;
@@ -49,11 +59,12 @@ public class LoadImageApp extends JPanel{
         }//END OF FIRST CATCH BLOCK FOR "PNG" IMAGES
         
         if(!try1 && !try2 && !try3) {
-        		System.out.println("No image type found");
+        		System.out.println("No image type found.");
         }
         
     }//END OF LOAD IMAGE
     
+//****************************METHODS*****************************************************************    
     //Sets a fixed width for the image loaded
     public int getFixedWidth() {
     	
@@ -100,6 +111,7 @@ public class LoadImageApp extends JPanel{
     		}
     }//END OF getFixedWidth()
     
+ //*********************************************************************************************    
     //Sets a fixed width for the image loaded 
     public int getFixedHeight() {
     		
@@ -140,6 +152,7 @@ public class LoadImageApp extends JPanel{
     		}
     }//END OF getFixedHeight()
     
+//*********************************************************************************************     
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

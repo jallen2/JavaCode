@@ -7,14 +7,16 @@
 package animalpack;
 
 public class Animal {
-	
+	//Animal data
 	private String name = "Animal"; 
 	private double height = 0; 
 	private double weightLbs = 0; 
 	private String color = "Some Color"; 
 	private String sound = "grrrr";
-	private static int count = 0;
 	private String description;
+	
+	//Animal MetaData
+	private static int count = 0;
 	private String measurement; 
 	
 	public Animal() {
