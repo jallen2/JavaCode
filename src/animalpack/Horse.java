@@ -2,7 +2,7 @@ package animalpack;
 
 import java.util.Scanner; 
 
-public class Horse extends Animal implements Action{
+public class Horse extends Animal implements Moveable{
 
 	private Scanner input = new Scanner(System.in);
 	private static int horseCount = 0;

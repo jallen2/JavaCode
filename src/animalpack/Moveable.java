@@ -1,6 +1,6 @@
 package animalpack;
 
-public interface Action {
+public interface Moveable {
 
 	void exercise();  
 	
