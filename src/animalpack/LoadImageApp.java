@@ -40,6 +40,14 @@ public class LoadImageApp extends JPanel{
         boolean try1 = true; 
         boolean try2 = true;
         boolean try3 = true;
+        
+        /*
+         * To use this class method: 
+         * Change the file path from "/Volumes/Docs_Apps/Images/" to the local folder where your images are stored.
+         * The image names must be capitolized in the files in order for this program to run.
+         * This feature can be altered by make your image names all lower case and swapping 
+         * the name.toUpperCase() to name.toLowerCase() above.  
+         */
         try {
             image = ImageIO.read(new File("/Volumes/Docs_Apps/Images/"+ name2 +".PNG"));
         } catch (IOException e) {
