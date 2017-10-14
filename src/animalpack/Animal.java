@@ -13,18 +13,22 @@ public class Animal {
 	private double weightLbs = 0; 
 	private String color = "Some Color"; 
 	private String sound = "grrrr";
+	private int age = 0; 
 	private String description;
 	
-	//Animal MetaData
+	//Animal MetaData 
 	private static int count = 0;
-	private String measurement; 
+	private String measurement;
+	private int ID;
 	
 	public Animal() {
-		count++; 
+		count++;
+		ID = count;
 	}//END OF EMPTY CONSTRUCTOR 
 	
 	public Animal(String name, String sound, String measurement) {
-		count++; 
+		count++;
+		ID = count;
 		this.name = name; 
 		this.sound = sound;
 		this.measurement = measurement; 
@@ -62,13 +66,21 @@ public class Animal {
 	}
 	public void setColor(String color) {
 		this.color = color;
-	}//END OF SETCOLOR
+	}
+	//AGE
+	public void setAge(int age) {
+		this.age = age; 
+	}
+	public int getAge() {
+		return this.age; 
+	}
+	
 	
 	//DESCRIPTION
 	public String getDescription() {
 		description = "You have created (a/an) " + name + " that is " + height
 				+ " \n" + measurement + " tall weighing " + weightLbs + " pounds \nand is " + 
-				color + " and it says " + sound + ".\n";
+				color + " and it says " + sound + ". This " + name + " is " + age + " years old.\n";
 		return description;
 	}
 	
@@ -77,10 +89,38 @@ public class Animal {
 		System.out.println(sound + "!!!");
 	}
 	
+	public int getID() {
+		 return ID; 
+	}
+	
 	//PRINT 
 	@Override 
 	public String toString() {
 		return getDescription(); 
 	} 
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (obj == null) {
+	        return false;
+	    }
+	    if (!Animal.class.isAssignableFrom(obj.getClass())) {
+	        return false;
+	    }
+	    final Animal other = (Animal) obj;
+	    if ((this.name == null) ? (other.name != null) : !this.name.equals(other.name)) {
+	        return false;
+	    }
+	    if (this.age != other.age) {
+	        return false;
+	    }
+	    if(this.getClass() != other.getClass()) {
+	    		return false; 
+	    }
+	    if (this.ID != other.ID) {
+    		return false; 
+    }
+	    return true; 
+	}
 	
 }//END OF ANIMAL CLASS

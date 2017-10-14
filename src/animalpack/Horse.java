@@ -20,7 +20,7 @@ public class Horse extends Animal implements Moveable{
 		super("Horse","Neigh","hands");
 		horseCount++; 
 		setName(name);  
-		System.out.println(name + " has been created.");
+		System.out.println("A horse named "+ name + " has been created.");
 	}//END OF CONSTUCTOR 2
 	
 	public Horse(boolean value) {
@@ -33,13 +33,49 @@ public class Horse extends Animal implements Moveable{
 		}
 	}//END OF CONSTRUCTOR 3
 	
+	public Horse(String name, int age) {
+		super("Horse","Neigh","hands");
+		horseCount++; 
+		setName(name);  
+		setAge(age); 
+		System.out.println("A horse named "+ name + " has been created.");
+	}//END OF CONSTUCTOR 4
+	
+	public Horse(String name, int age, boolean value) {
+		super("Horse","Neigh","hands");
+		horseCount++; 
+		setName(name);
+		setAge(age);
+		this.value = value; 
+		if(this.value == true) {
+			System.out.println("A new horse has been created.");
+		}
+	}//END OF CONSTUCTOR 5
+	public Horse(String name, boolean value) {
+		super("Horse","Neigh","hands");
+		horseCount++; 
+		setName(name); 
+		this.value = value; 
+		if(this.value == true) {
+			System.out.println("A new Horse has been created.");
+		}
+	}//CONSTRUCTOR 6
+	
 	public void setName(String name) {
 		super.setName(name); 
 	}//END OF SET NAME
 	
 	public String getName() {
 		return super.getName(); 
-	}//END OF GET NAME 
+	}//END OF GET NAME
+	
+	public void setAge(int age) {
+		super.setAge(age); 
+	}//END OF SET AGE
+	
+	public int getAge() {
+		return super.getAge(); 
+	}//END OF GET AGE
 	
 	public void addHorseSpecs() {
 		System.out.print("Whats this Horses name?\rHorse name: ");
